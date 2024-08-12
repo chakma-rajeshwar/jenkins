@@ -12,3 +12,20 @@ root@239ff5d6a1c4:/# ls
 bin  boot  dev  etc  home  lib  lib64  media  mnt  nodesource_setup.sh  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 root@239ff5d6a1c4:/# bash nodesource_setup.sh
 root@239ff5d6a1c4:/# apt install nodejs -y
+
+4. Create a Job: Go to Dashboard
+                 Select New Item
+                 Give a Name and Select an Item:
+                 I select Freestyle Job as it is the most basic job and suitable for simple and small-scale projects and I am a newbie.
+                 Create the Job
+                 Then select items from the list:
+                 Go to Build Steps
+                    - Execute shell: npm --version
+                    - Invoke top-level Maven Target: Maven Version: latest
+                                                     Goals: --version
+                    - Save the Job
+                 Now Select Build the Job. Visit different options.
+5. Install plugins: Go to Dashboard
+                    Go to Manage Jenkins
+                    Go to Plugins
+                    Go to available plugins and install NodeJs
