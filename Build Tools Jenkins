@@ -30,7 +30,7 @@ root@239ff5d6a1c4:/# npm -v # To check NPM version
 
 4. Create a Job: Go to Dashboard
                  Select New Item
-                 Give a Name and Select an Item:
+                 Give a Name and Select an Item: my-job
                  I select Freestyle Job as it is the most basic job and suitable for simple and small-scale projects and I am a newbie.
                  Create the Job
                  Then select items from the list:
@@ -44,3 +44,12 @@ root@239ff5d6a1c4:/# npm -v # To check NPM version
                     Go to Manage Jenkins
                     Go to Plugins
                     Go to available plugins and install NodeJs
+6. Now again follow the steps:
+      1. Go to Manage Jenkins -> Tools
+      2. Set Maven - Add Nodejs
+               Add Name like my-nodejs
+               Select Latest Version
+               Select Save Button
+
+**************** Configure Git Repository *****************
+1. 
