@@ -1,3 +1,15 @@
+1. Create a Jenkins-Server at any cloud
+2. Add firewall: Inbound Rules- TCP:8080
+3. Update apt: apt update
+4. Install docker: apt  install docker.io
+5. Install Jenkins Container: docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+6. Enter inside of the Jenkins Container Bash: docker exec -it 7fdc23a97bae bash
+7. Print Jenkins UI password: cat /var/jenkins_home/secrets/initialAdminPassword
+8. Get details of the volume: docker volume inspect jenkins_home
+9. List directories: ls /var/lib/docker/volumes/jenkins_home/_data
+
+******************** Now Set Jenkins for Maven, NodeJS and NPM *****************************
+
 1. Go to Tools
 2. Set Maven - Add Maven
                Add Name like maven-3.9
