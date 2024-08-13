@@ -8,7 +8,7 @@
 8. Get details of the volume: docker volume inspect jenkins_home
 9. List directories: ls /var/lib/docker/volumes/jenkins_home/_data
 
-******************** Now Set Jenkins for Maven, NodeJS and NPM *****************************
+******************** Now Build Tools Jenkins for Maven, NodeJS and NPM *****************************
 
 1. Go to Tools
 2. Set Maven - Add Maven
