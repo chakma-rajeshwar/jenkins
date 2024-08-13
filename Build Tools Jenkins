@@ -10,13 +10,14 @@
 
 ******************** Now Build Tools Jenkins for Maven, NodeJS and NPM *****************************
 
-1. Go to Tools
+1. Go to Manage Jenkins -> Tools
 2. Set Maven - Add Maven
                Add Name like maven-3.9
                Select Latest Version
                Select Save Button
 3. Set Node and NPM: 
-root@rajes-vm:~# docker exec -u 0 -it 239ff5d6a1c4 bash
+root@rajes-vm:~# docker ps # To find out container id
+root@rajes-vm:~# docker exec -u 0 -it 239ff5d6a1c4(container id) bash
 root@239ff5d6a1c4:/# apt update
 root@239ff5d6a1c4:/# apt install curl
 root@239ff5d6a1c4:/# curl -fsSL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
@@ -24,6 +25,8 @@ root@239ff5d6a1c4:/# ls
 bin  boot  dev  etc  home  lib  lib64  media  mnt  nodesource_setup.sh  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 root@239ff5d6a1c4:/# bash nodesource_setup.sh
 root@239ff5d6a1c4:/# apt install nodejs -y
+root@239ff5d6a1c4:/# node -v # To check Node version
+root@239ff5d6a1c4:/# npm -v # To check NPM version
 
 4. Create a Job: Go to Dashboard
                  Select New Item
