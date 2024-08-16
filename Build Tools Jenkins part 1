@@ -52,4 +52,12 @@ root@239ff5d6a1c4:/# npm -v # To check NPM version
                Select Save Button
 
 **************** Configure Git Repository *****************
-1. 
+1. Go to Job: my-job/job_name
+2. Go to Configure: select source code management
+                    select Git
+                    Give repository URL
+                    Give Credentials: username, password, ID (for private repository)
+                    Save
+3. Click Build Now.
+4. Check Build History: #1, #2, #3 and check console to analyse output
+
