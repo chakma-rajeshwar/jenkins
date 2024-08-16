@@ -22,3 +22,8 @@ ENTRYPOINT ["java", "-jar", "java-maven-app-1.0-SNAPSHOT.jar"]
 2. Then go to the jenkins job and change configuration: add Execute shell in the Build Steps
 and add the command docker build -t java-maven-app:1.0 .
 this command will build a java app with the name "java-maven-app" version 1.0
+
+3. Now check images: docker exec -it 7e98ebf1a6fe bash
+                     docker images
+4.
+
