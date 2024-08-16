@@ -1,0 +1,24 @@
+****************** Docker in Jenkins ******************8
+1. Build new container: docker run -p 8080:8080 -p 5000:5000 -d \
+-v jenkins_home:/var/jenkins_home \
+-v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:lts
+2. Now enter into container console: docker exec -u 0 -it 7e98ebf1a6fe bash
+3. Now to download docker inside the container: curl https://get.docker.com/ > dockerinstall && chmod 777 dockerinstall && ./dockerinstall
+4. Provide permission to docker.sock file so that you can use docker using jenkins user: 
+ls -l /var/run/docker.sock
+chmod 666 /var/run/docker.sock
+5. Now login using jenkins user: docker exec -it 7e98ebf1a6fe bash
+6. Test to run any docker command: docker run hello-world
+
+******** Build a docker image from Java-maven application ***********
+1. Go to the github repositore to create a Dockerfile and add the below code:
+FROM amazoncorretto:8-alpine3.17-jre
+RUN mkdir -p /usr/app
+EXPOSE 8080
+COPY ./target/java-maven-app-*.jar /usr/app
+WORKDIR  /usr/app
+ENTRYPOINT ["java", "-jar", "java-maven-app-1.0-SNAPSHOT.jar"]
+
+2. Then go to the jenkins job and change configuration: add Execute shell in the Build Steps
+and add the command docker build -t java-maven-app:1.0 .
+this command will build a java app with the name "java-maven-app" version 1.0
